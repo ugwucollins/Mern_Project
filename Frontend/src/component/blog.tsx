@@ -1,14 +1,12 @@
 import Loading from "../content/loading";
 import { Link } from "react-router-dom";
 
-interface Props {
-  posts: any;
-  loading: boolean;
-  err: any;
-  TextsNum: any;
-}
+// type Props = {
+//   posts:any, loading:any, err:any, TextsNum:any
+// }
 
-function Blog({ posts, loading, err, TextsNum }: Props) {
+function Blog({ posts, loading, err,  }: {  posts:any, loading:any, err:any,
+}) {
   return (
     <section className="h-screen">
       {loading ? (
@@ -33,13 +31,22 @@ function Blog({ posts, loading, err, TextsNum }: Props) {
                     </Link>
                   </div>
 
-                  <div className="mt-1 hidden sm:block transition font-medium text-black/70">
-                    {/* {post.body} */}
-                    {TextsNum(post.body, 80)}
+                  <div className="mt-1 hidden sm:block lg:hidden transition font-medium text-black/70">
+                    {/* {post.body} */ }
+                    
+                    {post.body.length >= 80?post.body.slice(0,65)+"...":post.body}
                   </div>
+
                   <div className="mt-1 sm:hidden block transition font-medium text-black/70">
-                    {TextsNum(post.body, 30)}
+                    {/* {TextsNum(post.body, 30)} */}
+                    {post.body.length >= 80?post.body.slice(0,45)+"...":post.body}
                   </div>
+
+                  <div className="mt-1 hidden lg:block sm:hidden md:hidden transition font-medium text-black/70">
+                    {/* {TextsNum(post.body, 30)} */}
+                    {post.body}
+                  </div>
+
                   <div className="flex mt-1 sm:mt-0 sm:flex-row sm:gap-2 gap-0 flex-col">
                     <div className="text-gray-700/80 font-normal">
                       Posted by: {post.name},

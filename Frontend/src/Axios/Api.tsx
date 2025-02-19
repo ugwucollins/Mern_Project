@@ -3,7 +3,8 @@ import axios from "axios";
 // const Url = "https://mern-project-422f.vercel.app/api";
 
 const Api = axios.create({
-  baseURL: "https://mern-project-422f.vercel.app/api",
+  // baseURL: "https://mern-project-422f.vercel.app/api",
+  baseURL: "http://localhost:3001/api/auth",
 });
 
 export default Api;

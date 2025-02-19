@@ -13,9 +13,12 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @apply transition-colors duration-500;
+  /* @apply bg-white dark:bg-black/90 */
   /* background-color: rgb(243, 243, 243); */
   /* grid-template-columns: repeat(auto-fit, minmax(100px, _300px)); */
   /* color: black; */
+  box-sizing: border-box;
 }
 .glass {
   backdrop-filter: blur(2px);
@@ -45,41 +48,3 @@
     @apply flex justify-center text-center gap-2;
   }
 }
-
-/* .open::before {
-  animation: openMenu forwards 1s;
-}
-.open::after {
-  animation: openMenus forwards 1s;
-}
-@keyframes openMenu {
-  from {
-    transform: rotate(10deg);
-  }
-  to {
-    transform: rotate(45deg);
-  }
-}
-@keyframes openMenus {
-  from {
-    transform: rotate(-10deg);
-  }
-  to {
-    transform: rotate(-45deg);
-  }
-}
-
-.close::before {
-  animation: closeMenu forwards 1.5s;
-}
-.close::after {
-  animation: closeMenu forwards 1s;
-}
-@keyframes closeMenu {
-  from {
-    left: 0;
-  }
-  to {
-    right: 0;
-  }
-} */

@@ -1,2 +1,4 @@
-
-/Backend/Mern_Project
+/node_modules
+.env
+.env.local
+# /Backend/Mern_Project
