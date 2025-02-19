@@ -54,3 +54,9 @@ app.listen(port, () => {
 // git branch -M main
 // git remote add origin https://github.com/ugwucollins/Mern_Project.git
 // git push -u origin main
+
+// or
+
+// git remote add origin git@github.com:ugwucollins/BlogZone.git
+// git branch -M main
+// git push -u origin main
