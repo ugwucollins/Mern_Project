@@ -5,7 +5,8 @@ import { AdminUrl } from "../../content/Types";
 
 const PrivateRoute = () => {
   const router = useNavigate();
-  const { userRole, routerPath }: any = UserAuth();
+  const { userRole, routerPath }: any = UserAuth(); 
+
 
   useEffect(() => {
     if (id) {
